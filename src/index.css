@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display&display=swap');
+@import './styles/animations.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Funnel Display', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+}
+
+.chat-container {
+  scrollbar-width: thin;
+  scrollbar-color: theme('colors.teal.200') theme('colors.transparent');
+}
+
+.chat-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background-color: theme('colors.teal.200');
+  border-radius: 20px;
+}
